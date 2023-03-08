@@ -1,0 +1,244 @@
+@use './colors' as color;
+@use './align' as *;
+@use './fonts' as font;
+
+.body__wrapper {
+    max-width: 984px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    .frontpage__banner-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+
+        .left__container {
+
+            .frontpage__info-txt-container {
+                width: 100%;
+
+                .frontpage__info-heading {
+                    font-weight: 700;
+                    font-size: 2.2rem;
+                    line-height: 1.25;
+                    margin-bottom: 16px;
+                    color: color.$white;
+                }
+
+                .frontpage__info-paragraph {
+                    color: color.$white;
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                    line-height: 1.4;
+                    font-style: normal;
+                    margin: 0 0 24px;
+                }
+            }
+
+            .frontpage__info-search_container {
+                border: 1px solid color.$logo-btn;
+                width: 100%;
+                @extend %align-center;
+                border-radius: 4px;
+
+                input {
+                    padding: 10px;
+                    height: auto;
+                    width: 100%;
+                    outline: none;
+                    border: none;
+                    background-color: transparent;
+                    line-height: 16px;
+                    font-size: 1.2rem;
+                    color: color.$logo-btn;
+                }
+
+                .search__btn {
+                    text-decoration: none;
+                    color: color.$dark-mode;
+                    background-color: color.$green;
+                    line-height: 24px;
+                    padding: 8px 16px;
+                    font-size: 1rem;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        // left container complete
+
+        .right__container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .update__text {
+                font-weight: 300;
+                font-size: 1rem;
+                line-height: 1.2;
+                margin-bottom: 24px;
+                text-align: right;
+                color: #fff;
+            }
+
+            .btns__container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+
+                .btn {
+                    @extend %align-center;
+                    justify-content: center;
+                    padding: 12px 8px;
+                    background-color: #292c31;
+                    border-radius: 4px;
+                    height: 48px;
+                    font-weight: 500;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #35383f;
+                    }
+                }
+
+                .btn1 i {
+                    padding-right: 5px;
+                }
+
+                .btn2 i:nth-child(2) {
+                    padding-right: 5px;
+                    padding-left: 5px;
+
+                    &:hover {
+                        color: color.$icon-hover-color;
+                    }
+
+                    //! some problem to fix
+                }
+
+                .btn3 i {
+                    padding: 0 5px;
+                }
+
+                .btn4 i {
+                    padding-right: 5px;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    .fontpage__banner-sub {
+        color: color.$white;
+        margin: 40px 0 0;
+        max-width: 750px;
+
+        .heading {
+            font-weight: 700;
+            font-size: 1.6rem;
+            line-height: 1.5;
+            margin: 0 0 12px;
+            padding: 0;
+        }
+
+        .paragraph {
+            font-weight: 500;
+            font-size: 1.2rem;
+            line-height: 1.5;
+            margin: 0 0 12px;
+            padding: 0;
+        }
+    }
+
+    // frontpage-content
+    .frontpage__content {
+        width: 100%;
+
+        .tabs {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            content: '';
+            background: color.$dark-mode;
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -1px;
+                left: 0;
+                width: 100%;
+                border-top: 2px solid color.$btn-hover;
+            }
+
+            .tabs__menu {
+                display: flex;
+                gap: 24px;
+
+                .tabs__menu-btn {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    text-decoration: none;
+                    padding: 12px 8px;
+                    min-width: 180px;
+                    cursor: pointer;
+                    font-weight: 500;
+                    font-size: 1.2rem;
+                    line-height: 24px;
+                    letter-spacing: 1px;
+
+                    .tabs__menu-title {
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 18px;
+                        text-transform: uppercase;
+                    }
+
+                    &:nth-child(2) {
+                        color: color.$white;
+                    }
+
+                    &:nth-child(3) {
+                        color: color.$white;
+                    }
+
+                    &:hover {
+                        color: color.$danger;
+                    }
+                }
+            }
+        }
+
+        .tabs__content {
+            margin-top: 30px;
+
+            .tabs__content-inner {
+                max-width: 984px;
+                margin: 0 auto;
+                box-sizing: border-box;
+
+                .fontpage-content-title {
+                    margin-bottom: 12px;
+                    font-size: 20px;
+                    line-height: 28px;
+                    color: color.$white;
+                }
+
+                .fontpage-content-description {
+                    max-width: 700px;
+                    margin-bottom: 24px;
+                    font-size: 14px;
+                    line-height: 20px;
+
+                    p {
+                        color: color.$white;
+                        padding-top: 8px;
+                    }
+                }
+            }
+        }
+    }
+
+}

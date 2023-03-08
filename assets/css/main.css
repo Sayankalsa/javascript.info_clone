@@ -1,0 +1,411 @@
+.body__wrapper .frontpage__banner-info .left__container .frontpage__info-search_container, .body__wrapper .frontpage__banner-info .right__container .btns__container .btn, header .header__wrapper, header .header__wrapper .left__container, header .header__wrapper .left__container .global__icon__container, header .header__wrapper .right__container, .list-sub__item {
+  display: flex;
+  align-items: center;
+}
+
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url("/assets/fonts/bold.woff2") format("woff2"), url("/assets/fonts/bold.woff") format("woff");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url("/assets/fonts/medium.woff2") format("woff2"), url("/assets/fonts/medium.woff") format("woff");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url("/assets/fonts/regular.woff2") format("woff2"), url("/assets/fonts/regular.woff") format("woff");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url("/assets/fonts/light.woff2") format("woff2"), url("/assets/fonts/light.woff") format("woff");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url("/assets/fonts/thin.woff2") format("woff2"), url("/assets/fonts/thin.woff") format("woff");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Julius Sans One", sans-serif;
+  src: url("/assets/fonts/juliussansone-regular.woff2") format("woff2"), url("/assets/fonts/juliussansone-regular.woff") format("woff");
+  font-weight: 400;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+  background-color: #232529;
+}
+
+main {
+  padding: 40px 0 28px;
+}
+
+.link {
+  color: #84a0ef;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.danger {
+  color: #e3796a;
+}
+
+.active {
+  color: #e3796a;
+  border: #e3796a;
+}
+
+.sticky {
+  background-color: #292c31;
+}
+
+.list__title {
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.list__title .list__link {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 24px;
+  margin-bottom: 16px;
+}
+.list__title .list__link:hover {
+  color: #e3796a;
+  text-decoration: underline;
+}
+
+.list-sub__item {
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.list-sub__item .bullet {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 16px;
+  color: #fff;
+}
+.list-sub__item .list-sub__title {
+  width: 100%;
+}
+.list-sub__item .list-sub__title .list-sub__link {
+  color: #84a0ef;
+  font-size: 1.1rem;
+  line-height: 23px;
+}
+.list-sub__item .list-sub__title .list-sub__link:hover {
+  color: #e3796a;
+  text-decoration: underline;
+}
+
+header {
+  width: 100%;
+  border-bottom: 4px solid #35383f;
+}
+header .header__wrapper {
+  justify-content: space-between;
+}
+header .header__wrapper .left__container {
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+header .header__wrapper .left__container .global__icon__container {
+  flex-direction: column;
+  border-right: 2px solid #35383f;
+  cursor: pointer;
+}
+header .header__wrapper .left__container .global__icon__container i {
+  font-size: 1.8rem;
+  color: #868d9a;
+  padding: 10px 18px 0;
+}
+header .header__wrapper .left__container .global__icon__container .globe__text {
+  color: #696e79;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 2px;
+}
+header .header__wrapper .left__container .global__icon__container:hover {
+  color: #e3796a;
+}
+header .header__wrapper .left__container .logo__container {
+  padding-left: 10px;
+}
+header .header__wrapper .right__container .buy__btn__container {
+  padding: 8px;
+}
+header .header__wrapper .right__container .buy__btn__container .link__btn {
+  font-size: 16px;
+  line-height: 24px;
+  padding: 2px 12px;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+header .header__wrapper .right__container .buy__btn__container .link__btn:hover {
+  color: #e3796a;
+}
+header .header__wrapper .right__container .search__container {
+  padding-right: 24px;
+}
+header .header__wrapper .right__container .mode__change__container {
+  padding: 8px;
+}
+
+.body__wrapper {
+  max-width: 984px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.body__wrapper .frontpage__banner-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+.body__wrapper .frontpage__banner-info .left__container .frontpage__info-txt-container {
+  width: 100%;
+}
+.body__wrapper .frontpage__banner-info .left__container .frontpage__info-txt-container .frontpage__info-heading {
+  font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  color: #fff;
+}
+.body__wrapper .frontpage__banner-info .left__container .frontpage__info-txt-container .frontpage__info-paragraph {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.4;
+  font-style: normal;
+  margin: 0 0 24px;
+}
+.body__wrapper .frontpage__banner-info .left__container .frontpage__info-search_container {
+  border: 1px solid #696e79;
+  width: 100%;
+  border-radius: 4px;
+}
+.body__wrapper .frontpage__banner-info .left__container .frontpage__info-search_container input {
+  padding: 10px;
+  height: auto;
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  line-height: 16px;
+  font-size: 1.2rem;
+  color: #696e79;
+}
+.body__wrapper .frontpage__banner-info .left__container .frontpage__info-search_container .search__btn {
+  text-decoration: none;
+  color: #232529;
+  background-color: #448460;
+  line-height: 24px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.body__wrapper .frontpage__banner-info .right__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.body__wrapper .frontpage__banner-info .right__container .update__text {
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  text-align: right;
+  color: #fff;
+}
+.body__wrapper .frontpage__banner-info .right__container .btns__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.body__wrapper .frontpage__banner-info .right__container .btns__container .btn {
+  justify-content: center;
+  padding: 12px 8px;
+  background-color: #292c31;
+  border-radius: 4px;
+  height: 48px;
+  font-weight: 500;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.body__wrapper .frontpage__banner-info .right__container .btns__container .btn:hover {
+  background-color: #35383f;
+}
+.body__wrapper .frontpage__banner-info .right__container .btns__container .btn1 i {
+  padding-right: 5px;
+}
+.body__wrapper .frontpage__banner-info .right__container .btns__container .btn2 i:nth-child(2) {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.body__wrapper .frontpage__banner-info .right__container .btns__container .btn2 i:nth-child(2):hover {
+  color: #D1463D;
+}
+.body__wrapper .frontpage__banner-info .right__container .btns__container .btn3 i {
+  padding: 0 5px;
+}
+.body__wrapper .frontpage__banner-info .right__container .btns__container .btn4 i {
+  padding-right: 5px;
+  font-size: 1.5rem;
+}
+.body__wrapper .fontpage__banner-sub {
+  color: #fff;
+  margin: 40px 0 0;
+  max-width: 750px;
+}
+.body__wrapper .fontpage__banner-sub .heading {
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin: 0 0 12px;
+  padding: 0;
+}
+.body__wrapper .fontpage__banner-sub .paragraph {
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 0 0 12px;
+  padding: 0;
+}
+.body__wrapper .frontpage__content {
+  width: 100%;
+}
+.body__wrapper .frontpage__content .tabs {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  content: "";
+  background: #232529;
+}
+.body__wrapper .frontpage__content .tabs::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  border-top: 2px solid #35383f;
+}
+.body__wrapper .frontpage__content .tabs .tabs__menu {
+  display: flex;
+  gap: 24px;
+}
+.body__wrapper .frontpage__content .tabs .tabs__menu .tabs__menu-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-decoration: none;
+  padding: 12px 8px;
+  min-width: 180px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 24px;
+  letter-spacing: 1px;
+}
+.body__wrapper .frontpage__content .tabs .tabs__menu .tabs__menu-btn .tabs__menu-title {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+.body__wrapper .frontpage__content .tabs .tabs__menu .tabs__menu-btn:nth-child(2) {
+  color: #fff;
+}
+.body__wrapper .frontpage__content .tabs .tabs__menu .tabs__menu-btn:nth-child(3) {
+  color: #fff;
+}
+.body__wrapper .frontpage__content .tabs .tabs__menu .tabs__menu-btn:hover {
+  color: #e3796a;
+}
+.body__wrapper .frontpage__content .tabs__content {
+  margin-top: 30px;
+}
+.body__wrapper .frontpage__content .tabs__content .tabs__content-inner {
+  max-width: 984px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.body__wrapper .frontpage__content .tabs__content .tabs__content-inner .fontpage-content-title {
+  margin-bottom: 12px;
+  font-size: 20px;
+  line-height: 28px;
+  color: #fff;
+}
+.body__wrapper .frontpage__content .tabs__content .tabs__content-inner .fontpage-content-description {
+  max-width: 700px;
+  margin-bottom: 24px;
+  font-size: 14px;
+  line-height: 20px;
+}
+.body__wrapper .frontpage__content .tabs__content .tabs__content-inner .fontpage-content-description p {
+  color: #fff;
+  padding-top: 8px;
+}
+
+.list__item .second-links .sub__list, .list__item .third-links .sub__list, .list__item .fourth-links .sub__list, .list__item .fifth-links .sub__list, .list__item .sixth-links .sub__list, .list__item .seventh-links .sub__list, .list__item .eighth-links .sub__list, .list__item .ninth-links .sub__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.list__item {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.list__item .first-links {
+  width: 67%;
+}
+.list__item .first-links .sub__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.list__item .second-links {
+  width: 100%;
+}
+.list__item .third-links {
+  width: 100%;
+}
+.list__item .fourth-links {
+  width: 100%;
+}
+.list__item .fifth-links {
+  width: 100%;
+}
+.list__item .sixth-links {
+  width: 100%;
+}
+.list__item .seventh-links {
+  width: 100%;
+}
+.list__item .eighth-links {
+  width: 100%;
+}
+.list__item .ninth-links {
+  width: 100%;
+}/*# sourceMappingURL=main.css.map */
